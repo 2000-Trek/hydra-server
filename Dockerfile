@@ -1,10 +1,10 @@
-FROM debian
+FROM node:19-alpine
+EXPOSE 8000
 
 WORKDIR /hydra
 
-RUN apt install npm
-    npm install yarn
-
 COPY . .
+Run yarn install
 
-CMD ["yarn", "start"]
+
+CMD ["yarn", "serve"]
